@@ -135,3 +135,6 @@ class Response(object):
 
     def clean_amount(self, value):
         return Decimal("%s.%s" % (str(value)[:-2], str(value)[-2:]))
+
+    def get_parameters(self):
+        return self._parameters
